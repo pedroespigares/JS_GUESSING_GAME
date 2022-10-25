@@ -28,10 +28,13 @@ function guessColor() {
   document.getElementById("resultado").innerHTML =
     "Aquí se mostrará tu resultado";
   for (let i = 0; i < divs.length; i++) {
+    divs[i].removeAttribute("id");
     divs[i].addEventListener("click", (e) => {
       if (e.target.style.backgroundColor == choosenColor) {
         e.target.style.opacity= "100%";
         document.getElementById("resultado").innerHTML = "¡Has acertado!";
+        document.getElementById("resultado").style.textDecoration = "underline";
+        e.target.setAttribute("id","rotateDiv");
       } else {
         e.target.style.opacity= "0%";
         e.target.style.transition= "0.2s";
