@@ -135,13 +135,13 @@ and (max-width: 736px)
         padding: 20px;
     }
     h1{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     h3{
         font-size: 1em;
         text-align: center;
-        margin-left: 30%;
-        margin-right: 30%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
     .color{
         width: 90px;
