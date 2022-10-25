@@ -140,8 +140,8 @@ and (max-width: 736px)
     h3{
         font-size: 1em;
         text-align: center;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     .color{
         width: 90px;
