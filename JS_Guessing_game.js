@@ -27,12 +27,12 @@ function guessColor() {
   document.getElementById("resultado").innerHTML =
     "Aquí se mostrará tu resultado";
   for (let i = 0; i < divs.length; i++) {
-    divs[i].addEventListener("click", () => {
-      if (divs[i].style.backgroundColor == choosenColor) {
+    divs[i].addEventListener("click", (e) => {
+      if (e.target.style.backgroundColor == choosenColor) {
         document.getElementById("resultado").innerHTML = "¡Has acertado!";
       } else {
-        divs[i].style.backgroundColor= "#232323";
-        divs[i].style.transition= "0.2s"
+        e.target.style.backgroundColor= "#232323";
+        e.target.style.transition= "0.2s"
         document.getElementById("resultado").innerHTML = "¡Sigue intentando!";
       }
     });
