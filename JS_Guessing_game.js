@@ -14,6 +14,7 @@ function guessColor() {
   let divs = document.getElementsByClassName("color");
   for (let i = 0; i < divs.length; i++) {
     let color = randomColor();
+    divs[i].style.opacity = "100%";
     divs[i].style.backgroundColor = color;
     colores.push(color);
   }
@@ -29,10 +30,11 @@ function guessColor() {
   for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener("click", (e) => {
       if (e.target.style.backgroundColor == choosenColor) {
+        e.target.style.opacity= "100%";
         document.getElementById("resultado").innerHTML = "¡Has acertado!";
       } else {
-        e.target.style.backgroundColor= "#232323";
-        e.target.style.transition= "0.2s"
+        e.target.style.opacity= "0%";
+        e.target.style.transition= "0.2s";
         document.getElementById("resultado").innerHTML = "¡Sigue intentando!";
       }
     });
