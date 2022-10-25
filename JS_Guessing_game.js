@@ -43,7 +43,7 @@ window.onload = () => {
   // Genera nuevos colores al pulsar sobre el enlace
 
   let newColors = document.querySelector("a");
-  newColors.addEventListener("click", guessColor);
+  newColors.addEventListener("click", guessColor());
 
   guessColor();
 };
