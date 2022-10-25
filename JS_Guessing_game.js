@@ -26,19 +26,21 @@ function guessColor() {
   // Recorre los divs y si el color de dicho div es el elegido aleatoriamente "gana"
 
   document.getElementById("resultado").innerHTML =
-    "Aquí se mostrará tu resultado";
+    "Result...";
   for (let i = 0; i < divs.length; i++) {
     divs[i].removeAttribute("id");
+    document.getElementById("resultado").style.textDecoration = "none";
     divs[i].addEventListener("click", (e) => {
       if (e.target.style.backgroundColor == choosenColor) {
         e.target.style.opacity= "100%";
-        document.getElementById("resultado").innerHTML = "¡Has acertado!";
+        document.getElementById("resultado").innerHTML = "Guessed!";
         document.getElementById("resultado").style.textDecoration = "underline";
         e.target.setAttribute("id","rotateDiv");
       } else {
         e.target.style.opacity= "0%";
         e.target.style.transition= "0.2s";
-        document.getElementById("resultado").innerHTML = "¡Sigue intentando!";
+        document.getElementById("resultado").innerHTML = "Keep trying!";
+        document.getElementById("resultado").style.textDecoration = "none";
       }
     });
   }
