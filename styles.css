@@ -156,4 +156,8 @@ main {
   main {
     height: 100%;
   }
+  #div_principal {
+    gap: 20px;
+    margin: 0 auto;
+  }
 }
