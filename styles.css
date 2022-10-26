@@ -59,6 +59,7 @@ a {
   color: #2d8e99;
   text-decoration: none;
   padding: 10px;
+  cursor: pointer;
 }
 
 a:hover {
@@ -89,6 +90,7 @@ main {
   height: 200px;
   border-radius: 40px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 #rotateDiv {
